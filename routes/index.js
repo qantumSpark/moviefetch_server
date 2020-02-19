@@ -21,7 +21,6 @@ router.get("/:query", (req, res) => {
         res.json(response.data);
       })
       .catch(err => {
-        timedReset(5000);
         res.json({
           message: "An error occured",
           error: err
